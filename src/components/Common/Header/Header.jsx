@@ -28,44 +28,36 @@ const Header = () => {
         </StyledLogoDiv>
         <StyledHomeDiv>
           <StyledATag>
-            <RiHomeHeartLine />
-            home
+            <RiHomeHeartLine /> home
           </StyledATag>
         </StyledHomeDiv>
         <StyledHomeCenterDiv>
           <StyledATag href="">
-            <FaDog />내 새끼 자랑 게시판
+            <FaDog /> 내 새끼 자랑 게시판
           </StyledATag>
           <StyledATag href="">
-            <FaRegHeart />
-            같이 산책 게시판
+            <FaRegHeart /> 같이 산책 게시판
           </StyledATag>
           <StyledATag href="">
-            <VscCoffee />
-            우리 동네 강아지 까페
+            <VscCoffee /> 우리 동네 강아지 까페
           </StyledATag>
           <StyledATag href="">
-            <MdOutlineEventNote />
-            공지사항
+            <MdOutlineEventNote /> 공지사항
           </StyledATag>
         </StyledHomeCenterDiv>
         <StyledMemberDiv>
           <StyledATag href="">
-            <RiLoginBoxLine />
-            로그인
+            <RiLoginBoxLine /> 로그인
           </StyledATag>
           <StyledATag href="">
-            <IoMdPersonAdd />
-            회원가입
+            <IoMdPersonAdd /> 회원가입
           </StyledATag>
           <StyledATag href="">
-            <IoPersonCircleOutline />
-            마이페이지
+            <IoPersonCircleOutline /> 마이페이지
           </StyledATag>
 
           <StyledATag href="">
-            <RiLogoutBoxLine />
-            로그아웃
+            <RiLogoutBoxLine /> 로그아웃
           </StyledATag>
         </StyledMemberDiv>
       </StyledHeaderDiv>
