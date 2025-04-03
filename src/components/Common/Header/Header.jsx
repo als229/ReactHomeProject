@@ -27,37 +27,39 @@ const Header = () => {
           <SiDatadog />
         </StyledLogoDiv>
         <StyledHomeDiv>
-          <StyledATag>
-            <RiHomeHeartLine /> home
+          <StyledATag href="/">
+            <RiHomeHeartLine style={{ "margin-right": "4px" }} /> home
           </StyledATag>
         </StyledHomeDiv>
         <StyledHomeCenterDiv>
           <StyledATag href="">
-            <FaDog /> 내 새끼 자랑 게시판
+            <FaDog style={{ "margin-right": "4px" }} /> 내 새끼 자랑 게시판
           </StyledATag>
           <StyledATag href="">
-            <FaRegHeart /> 같이 산책 게시판
+            <FaRegHeart style={{ "margin-right": "4px" }} /> 같이 산책 게시판
           </StyledATag>
           <StyledATag href="">
-            <VscCoffee /> 우리 동네 강아지 까페
+            <VscCoffee style={{ "margin-right": "4px" }} /> 우리 동네 강아지
+            까페
           </StyledATag>
           <StyledATag href="">
-            <MdOutlineEventNote /> 공지사항
+            <MdOutlineEventNote style={{ "margin-right": "4px" }} /> 공지사항
           </StyledATag>
         </StyledHomeCenterDiv>
         <StyledMemberDiv>
-          <StyledATag href="">
-            <RiLoginBoxLine /> 로그인
+          <StyledATag href="/login">
+            <RiLoginBoxLine style={{ "margin-right": "4px" }} /> 로그인
           </StyledATag>
           <StyledATag href="">
-            <IoMdPersonAdd /> 회원가입
+            <IoMdPersonAdd style={{ "margin-right": "4px" }} /> 회원가입
           </StyledATag>
           <StyledATag href="">
-            <IoPersonCircleOutline /> 마이페이지
+            <IoPersonCircleOutline style={{ "margin-right": "4px" }} />{" "}
+            마이페이지
           </StyledATag>
 
           <StyledATag href="">
-            <RiLogoutBoxLine /> 로그아웃
+            <RiLogoutBoxLine style={{ "margin-right": "4px" }} /> 로그아웃
           </StyledATag>
         </StyledMemberDiv>
       </StyledHeaderDiv>

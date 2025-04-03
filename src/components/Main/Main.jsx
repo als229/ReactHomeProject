@@ -1,13 +1,16 @@
-import { MainBodyDiv } from "./Main.styled"
-import ImageSlider from "./imgSlider/ImgSlider"
+import ImageSlider from "./imgSlider/ImgSlider";
+import MainMungMung from "./MainMungMung/MainMungMung";
+import MainDetail from "./MainDetail/MainDetail";
+import { MainBodyDiv } from "./Main.styled";
 
 const Main = () => {
   return (
     <>
+      <br />
+      <ImageSlider />
       <MainBodyDiv>
-         <br />
-        <ImageSlider/>
-        
+        <MainMungMung></MainMungMung>
+        <MainDetail></MainDetail>
       </MainBodyDiv>
     </>
   );

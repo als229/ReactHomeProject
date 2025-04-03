@@ -10,6 +10,8 @@ export const StyledHeaderDiv = styled.header`
 export const StyledATag = styled.a`
   text-decoration: none;
   color: black;
+  display: flex;
+  align-items: center;
 
   &:visited {
     text-decoration: none;

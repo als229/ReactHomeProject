@@ -1,10 +1,17 @@
-import { SlideImg, SlideTtitleSpan, SlideHeartSpan } from "../ImgSlider.styled";
+import {
+  SlideImg,
+  SlideTtitleDiv,
+  SlideHeartDiv,
+  SlideContainerDiv,
+} from "../ImgSlider.styled";
 
 const SlideImgCard = () => {
   return (
     <>
-      <SlideTtitleSpan>우리애 이쁘쥬</SlideTtitleSpan>
-      <SlideHeartSpan>♥ 145</SlideHeartSpan>
+      <SlideContainerDiv>
+        <SlideTtitleDiv>우리애 이쁘쥬</SlideTtitleDiv>
+        <SlideHeartDiv>♥ 145</SlideHeartDiv>
+      </SlideContainerDiv>
       <SlideImg src="/멍멍이1.webp" alt="Slide 1" className="slide-image" />
     </>
   );
