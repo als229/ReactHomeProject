@@ -16,10 +16,15 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 import { IoMdPersonAdd } from "react-icons/io";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { SiDatadog } from "react-icons/si";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const { auth, logout } = useContext(AuthContext);
+  const navi = useNavigate();
+
   return (
     <>
       <StyledHeaderDiv>
@@ -27,7 +32,7 @@ const Header = () => {
           <SiDatadog />
         </StyledLogoDiv>
         <StyledHomeDiv>
-          <StyledATag href="/">
+          <StyledATag onClick={() => navi("/")}>
             <RiHomeHeartLine style={{ "margin-right": "4px" }} /> home
           </StyledATag>
         </StyledHomeDiv>
@@ -47,20 +52,28 @@ const Header = () => {
           </StyledATag>
         </StyledHomeCenterDiv>
         <StyledMemberDiv>
-          <StyledATag href="/login">
-            <RiLoginBoxLine style={{ "margin-right": "4px" }} /> 로그인
-          </StyledATag>
-          <StyledATag href="">
-            <IoMdPersonAdd style={{ "margin-right": "4px" }} /> 회원가입
-          </StyledATag>
-          <StyledATag href="">
-            <IoPersonCircleOutline style={{ "margin-right": "4px" }} />{" "}
-            마이페이지
-          </StyledATag>
+          {!auth.isAuthenticated ? (
+            <>
+              <StyledATag onClick={() => navi("/login")}>
+                <RiLoginBoxLine style={{ "margin-right": "4px" }} /> 로그인
+              </StyledATag>
+              <StyledATag onClick={() => navi("/enrollForm")}>
+                <IoMdPersonAdd style={{ "margin-right": "4px" }} /> 회원가입
+              </StyledATag>
+            </>
+          ) : (
+            <>
+              <StyledATag onClick={() => navi("/myPage")}>
+                <IoPersonCircleOutline style={{ "margin-right": "4px" }} />{" "}
+                마이페이지
+              </StyledATag>
 
-          <StyledATag href="">
-            <RiLogoutBoxLine style={{ "margin-right": "4px" }} /> 로그아웃
-          </StyledATag>
+              <StyledATag onClick={logout}>
+                <RiLogoutBoxLine style={{ "margin-right": "4px" }} />
+                로그아웃
+              </StyledATag>
+            </>
+          )}
         </StyledMemberDiv>
       </StyledHeaderDiv>
     </>
